@@ -6,14 +6,30 @@ public class Motor extends Kendaraan{
         this.jenisTransmisi = jenisTransmisi;
     }
 
-    public String getJenisTransmisi(String jenisTransmisi){
+    public String getJenisTransmisi(){
         return jenisTransmisi;
     }
     public void setJenisTransmisi(String jenisTransmisi){
         this.jenisTransmisi = jenisTransmisi;
     }
 
-    public void tampilinfo(){
+    @Override
+    public void tampilInfo() {
+        System.out.printf("[MOTOR] Kode: %s | Nama: %-20s | Transmisi: %-6s | Tarif: Rp%,.0f/hari | Status: %s%n",
+                getKodeKendaraan(),
+                getNamaKendaraan(),
+                jenisTransmisi,
+                getHargaSewaPerHari(),
+                isTersedia() ? "Tersedia" : "Tidak Tersedia"
+        );
+    }
 
+    @Override
+    public double hitungBiayaDasar(int lamaSewa) {
+        double biaya = lamaSewa * getHargaSewaPerHari();
+        if (jenisTransmisi.equalsIgnoreCase("Matik")) {
+            biaya += 10000L * lamaSewa;
+        }
+        return biaya;
     }
 }

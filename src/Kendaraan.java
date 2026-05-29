@@ -1,4 +1,4 @@
-public class Kendaraan {
+public abstract class Kendaraan {
     private String kodeKendaraan;
     private String namaKendaraan;
     private double hargaSewaPerHari;
@@ -8,7 +8,7 @@ public class Kendaraan {
         this.kodeKendaraan = kodeKendaraan;
         this.namaKendaraan = namaKendaraan;
         this.hargaSewaPerHari = hargaSewaPerHari;
-        this.isTersedia = isTersedia;
+        this.isTersedia = true;
     }
 
     public String getKodeKendaraan(){
@@ -17,25 +17,25 @@ public class Kendaraan {
     public void setKodeKendaraan(String kodeKendaraan){
         this.kodeKendaraan = kodeKendaraan;
     }
-    public String getNamaKendaraan(String namaKendaraan){
+    public String getNamaKendaraan(){
         return namaKendaraan;
     }
     public void setNamaKendaraan(String namaKendaraan){
         this.namaKendaraan = namaKendaraan;
     }
-    public double getHargaSewaPerHari(double hargaSewaPerHari){
+    public double getHargaSewaPerHari(){
         return hargaSewaPerHari;
     }
     public void setHargaSewaPerHari(double hargaSewaPerHari){
         this.hargaSewaPerHari = hargaSewaPerHari;
     }
-    public boolean isTersedia(boolean isTersedia){
+    public boolean isTersedia(){
         return isTersedia;
     }
     public void setTersedia(boolean status){
         this.isTersedia = status;
     }
 
-    public abstract void tampilinfo();
+    public abstract void tampilInfo();
     public abstract double hitungBiayaDasar(int lamaSewa);
 }
