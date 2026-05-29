@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/UAP _GoDrive.iml" filepath="$PROJECT_DIR$/UAP _GoDrive.iml" />
+      <module fileurl="file://$PROJECT_DIR$/UAP_GoDrive.iml" filepath="$PROJECT_DIR$/UAP_GoDrive.iml" />
     </modules>
   </component>
 </project>
